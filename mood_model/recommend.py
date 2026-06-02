@@ -1,8 +1,8 @@
 import joblib
 
 # Load model
-model = joblib.load("model/mood_model.pkl")
-vectorizer = joblib.load("model/vectorizer.pkl")
+model = joblib.load("mood_model/mood_model.pkl")
+vectorizer = joblib.load("mood_model/vectorizer.pkl")
 
 
 def predict_mood(text):
