@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin:0;
     padding:0;
@@ -559,4 +560,567 @@ body{
     .mood-name{
         font-size:20px;
     }
+=======
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Jacques Francois', serif;
+    background:
+    linear-gradient(
+        180deg,
+        #03063E 0%,
+        #020426 100%
+    );
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar{
+    width:320px;
+    height:100vh;
+    background:black;
+
+    padding:18px 10px;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+    transition:.4s ease;
+    z-index:1000;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.sidebar.closed{
+    width:0;
+    padding:0;
+    overflow:hidden;
+}
+
+.sidebar::-webkit-scrollbar{
+    width:0;
+}
+
+.sidebar{
+    scrollbar-width:none;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:2px;
+    margin-bottom:40px;
+}
+
+.logo-section img{
+    width:95px;
+    height:95px;
+    object-fit:contain;
+}
+
+.logo-section h2{
+    font-size:28px;
+    font-weight:400;
+    margin-left:-5px;
+}
+
+.logo-section p{
+    font-size:12px;
+    color:#d9d9d9;
+    margin-left:-5px;
+}
+
+.menu-toggle{
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+    margin-left:25px;
+    margin-top:-20px;
+}
+
+.menu{
+    margin-top:50px;
+    flex:1;
+}
+
+.menu-title{
+    color:#bdbdbd;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.focus,
+.you{
+    margin-top:40px;
+}
+
+.menu a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color:white;
+    text-decoration:none;
+
+    margin:10px 0;
+    padding:12px 14px;
+
+    border-radius:12px;
+    font-size:18px;
+
+    transition:.3s ease;
+}
+
+.menu a:hover{
+    background:
+    rgba(139,92,246,.12);
+
+    color:#c7b2ff;
+}
+
+.menu a.active{
+    background:
+    linear-gradient(
+        90deg,
+        rgba(139,92,246,.22),
+        rgba(37,99,255,.15)
+    );
+
+    border-left:
+    4px solid #8B5CF6;
+
+    color:#c7b2ff;
+
+    box-shadow:
+    0 0 20px
+    rgba(139,92,246,.18);
+
+    margin-left:-6px;
+}
+
+.logout-section{
+    margin-top:100px;
+    padding:1px;
+}
+
+.logout-btn{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color:white;
+    text-decoration:none;
+    font-size: 18px;
+
+    padding:12px 14px;
+    border-radius:12px;
+
+    transition:.3s ease;
+
+    background:
+    rgba(255,0,0,0.08);
+}
+
+.logout-btn:hover{
+
+    background:
+    rgba(139,92,246,.12);
+
+    color:#c7b2ff;
+
+    transform:translateY(-2px);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    height: 70px;
+    background: #03024b;
+
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:0 30px;
+
+    position: fixed;   
+    top: 0;
+    left: 320px;       
+
+    width: calc(100% - 320px);
+    z-index: 1000;
+
+    transition: all 0.4s ease;
+}
+
+.user-info{
+
+    color:white;
+
+    font-size:18px;
+
+    white-space:nowrap;
+
+    margin-left:auto;
+
+    max-width:250px;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+}
+.nav-logo{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    cursor:pointer;
+}
+
+.nav-logo img{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+}
+
+.nav-logo span{
+    font-size:24px;
+}
+
+.navbar.expanded{
+    left:0;
+    width:100%;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content{
+    margin-left:320px;
+    margin-top:70px;
+    padding:40px 50px;
+    min-height:100vh;
+}
+
+.main-content.expanded{
+    margin-left:0;
+}
+
+/* =========================
+   DASHBOARD PILL
+========================= */
+
+.dashboard-pill{
+    width:fit-content;
+    background:#040535;
+    border:1px solid #232E8C;
+    border-radius:30px;
+
+    padding:10px 22px;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    color:#B9B8B8;
+    font-family:'Lemonada';
+    font-size:13px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.dashboard-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    margin-top:35px;
+    margin-bottom:45px;
+    font-family:'Lemonada';
+}
+
+/* =========================
+   CLEAR BUTTON
+========================= */
+
+.clear-btn{
+    background:black;
+    border:none;
+    border-radius:22px;
+
+    color:white;
+    padding:14px 28px;
+
+    font-family:'Lemonada';
+    font-size:16px;
+
+    cursor:pointer;
+    margin-top:120px;
+
+    transition:.3s ease;
+}
+
+.clear-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================
+   GRID
+========================= */
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    margin-top:8px;
+    color:#B9B8B8;
+    font-size:12px;
+    font-family:'Lemonada';
+    column-gap:100px;
+}
+
+/* =========================
+   PANELS
+========================= */
+
+.dashboard-panel{
+    background:
+    rgba(4,5,53,.65);
+
+    border-radius:30px;
+    padding:35px;
+    min-height:520px;
+}
+
+.dashboard-header h1{
+    font-family:'Lemon';
+    font-size:72px;
+    font-weight:400;
+    line-height:1.1;
+}
+
+.dashboard-header span{
+    color:#8B5CF6;
+}
+
+.dashboard-grid h3{
+    margin-bottom: 30px;
+}
+
+.progress-bar{
+    gap: 10px;
+}
+
+.mood-label{
+    margin-top: 10px;
+}
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-title{
+    color:#B9B8B8;
+    font-size:16px;
+    font-family:'Lemonada';
+    letter-spacing:1px;
+
+    margin-bottom:30px;
+}
+
+/* =========================
+   MOOD DISTRIBUTION
+========================= */
+
+.mood-list{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.mood-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:10px;
+}
+
+.mood-name{
+    color:#D8D8D8;
+    font-size:24px;
+    font-style:italic;
+}
+
+.mood-count{
+    color:#D8D8D8;
+    font-size:22px;
+}
+
+.progress-bar{
+    width:100%;
+    height:14px;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    margin:
+    8px 0 20px;
+
+    position:relative;
+
+    border:
+    1px solid
+    rgba(255,255,255,0.08);
+}
+
+.progress{
+
+    height:100%;
+    border-radius:999px;
+
+    transition:
+    width 0.6s ease;
+
+    background:
+    linear-gradient(
+        90deg,
+        #8B5CF6 0%,
+        #A855F7 50%,
+        #C084FC 100%
+    );
+
+    box-shadow:
+    0 0 15px
+    rgba(139,92,246,0.45);
+}
+
+/* =========================
+   RECENT ENTRIES
+========================= */
+
+.recent-card h3{
+    margin-left: 50px;
+}
+.recent-entries{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+    margin-left: 40px;
+}
+
+.entry-card{
+    border:1px solid #4A4272;
+    border-radius:22px;
+
+    padding:18px 18px;
+
+    transition:.3s ease;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.entry-card:hover{
+    border-color:#8B5CF6;
+    transform:translateY(-3px);
+}
+
+.entry-top{
+    display:flex;
+    justify-content:space-between;
+
+    margin-bottom:10px;
+}
+
+.entry-mood{
+    color:#B9B8B8;
+    font-size:14px;
+    font-family:'Lemonada';
+}
+
+.entry-date{
+    color:#B9B8B8;
+    font-size:14px;
+}
+
+.entry-text{
+    font-size:12px;
+    color:white;
+    margin-bottom:8px;
+    line-height:1.6;
+}
+
+.entry-response{
+    font-size:12px;
+    color:#D9D9D9;
+    line-height:1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+    .dashboard-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard-header{
+        flex-direction:column;
+    }
+
+    .clear-btn{
+        margin-top:25px;
+    }
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .navbar{
+        left:0;
+        width:100%;
+    }
+
+    .main-content{
+        margin-left:0;
+        padding:100px 20px;
+    }
+
+    .heading h1{
+        font-size:48px;
+    }
+
+    .dashboard-panel{
+        padding:25px;
+    }
+
+    .mood-name{
+        font-size:20px;
+    }
+>>>>>>> 236cf661cc88def0fa39c2dc0c47a7d964d8c411
 }

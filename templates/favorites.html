@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -185,4 +186,193 @@
     </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>VibeSync - Favorites</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+    href="{{ url_for('static',
+    filename='css/favorites.css') }}">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Lemon&family=Lemonada:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo-section">
+
+            <img src="{{ url_for('static',
+            filename='images/logo.png') }}">
+
+            <div class="logo-text">
+                <h2>VibeSync</h2>
+                <p>Your Vibe, Perfectly Synced</p>
+            </div>
+
+            <div class="menu-toggle"
+            id="menuToggle">
+                ☰
+            </div>
+
+        </div>
+
+        <div class="menu">
+
+            <div class="menu-title">
+                Discover
+            </div>
+
+            <a href="{{ url_for('home') }}">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="{{ url_for('mood_analyzer') }}">
+                <i class="fa-regular fa-face-smile"></i>
+                Mood Analyzer
+            </a>
+
+            <a href="{{ url_for('recommendation') }}">
+                <i class="fa-solid fa-music"></i>
+                Recommendations
+            </a>
+
+            <div class="menu-title focus">
+                Focus
+            </div>
+
+            <a href="{{ url_for('studyzone') }}">
+                <i class="fa-solid fa-book-open"></i>
+                Study Zone
+            </a>
+
+            <div class="menu-title you">
+                You
+            </div>
+
+            <a href="{{ url_for('dashboard') }}">
+                <i class="fa-solid fa-chart-line"></i>
+                Dashboard
+            </a>
+
+            <a href="{{ url_for('favorites') }}"
+            class="active">
+                <i class="fa-regular fa-heart"></i>
+                Favorite
+            </a>
+
+            <a href="{{ url_for('profile') }}">
+                <i class="fa-regular fa-user"></i>
+                Profile
+            </a>
+
+        </div>
+        <div class="logout-section">
+
+            <a href="{{ url_for('logout') }}"
+            class="logout-btn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP NAVBAR -->
+        <nav class="navbar">
+
+            <div class="nav-logo" id="navLogo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}">
+                <span>VibeSync</span>
+            </div>
+
+            <div class="user-info">
+                Hi, {{ session['username'] }}
+            </div>
+
+        </nav>
+
+        <!-- FAVORITES CONTENT -->
+        <section class="favorites-container">
+
+            <!-- FAVORITES PILL -->
+            <div class="favorites-pill">
+
+                <i class="fa-regular fa-heart"></i>
+                Favorites
+
+            </div>
+
+            <!-- HEADING -->
+            <div class="favorites-heading">
+
+                <h1>
+                    Saved
+                    <span>playlist</span>
+                </h1>
+
+            </div>
+
+            <!-- FAVORITES CARD -->
+            <div class="favorites-card">
+
+                <div id="favoritesContainer">
+
+                <!-- Saved playlists appear here -->
+
+                </div>
+
+                <div
+                    class="empty-state"
+                    id="emptyState">
+
+                    <i class="fa-regular fa-heart heart-icon"></i>
+
+                    <p>No Favorites Yet</p>
+
+                    <button
+                        class="browse-btn"
+                        onclick="window.location.href='/recommendation'">
+
+                        Browse Playlists
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="{{ url_for(
+    'static',
+    filename='js/favorites.js') }}">
+    </script>
+
+</body>
+>>>>>>> 236cf661cc88def0fa39c2dc0c47a7d964d8c411
 </html>

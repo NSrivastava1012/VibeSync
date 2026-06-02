@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,4 +84,91 @@ href="{{ url_for('static', filename='css/auth.css') }}">
 </div>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VibeSync Login</title>
+
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Lemon&family=Lemonada:wght@300;400;500&display=swap">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/auth.css') }}">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <img
+        src="{{ url_for('static', filename='images/logo.png') }}"
+        class="logo">
+
+        <h1>Welcome Back</h1>
+
+        <p class="subtitle">
+            Sign in to continue your music journey
+        </p>
+
+        <form method="POST">
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required>
+
+            </div>
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required>
+
+            </div>
+
+            <button
+            type="submit"
+            class="auth-btn">
+
+                Sign In
+
+            </button>
+
+        </form>
+
+        <p class="bottom-text">
+
+            Don't have an account?
+
+            <a href="{{ url_for('register') }}">
+                Create Account
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+>>>>>>> 236cf661cc88def0fa39c2dc0c47a7d964d8c411
 </html>

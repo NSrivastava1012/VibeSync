@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin:0;
     padding:0;
@@ -409,4 +410,417 @@ body{
     .favorites-heading h1{
         font-size:46px;
     }
+=======
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Jacques Francois',
+    serif;
+
+    background:
+    linear-gradient(
+        180deg,
+        #03063E 0%,
+        #020426 100%
+    );
+
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar{
+    width:320px;
+    height:100vh;
+
+    background:black;
+
+    padding:18px 10px;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    overflow-y:auto;
+    transition:.4s ease;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.sidebar::-webkit-scrollbar{
+    width:0;
+}
+
+.sidebar.closed{
+    width:0;
+    padding:0;
+    overflow:hidden;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:2px;
+
+    margin-bottom:40px;
+}
+
+.logo-section img{
+    width:95px;
+    height:95px;
+    object-fit:contain
+}
+
+.logo-section h2{
+    font-size:28px;
+    font-weight:400;
+    line-height:1;
+    margin-bottom:6px;
+    margin-left: -5px;
+}
+
+.logo-section p{
+    font-size:12px;
+    color:#d9d9d9;
+    line-height:1.2;
+    margin-left: -5px;
+}
+
+.menu{
+    margin-top:50px;
+    flex:1;
+}
+
+.menu-toggle{
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    margin-top: -20px;
+    margin-left: 25px;
+}
+
+.menu-title{
+    color:#bdbdbd;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.focus,
+.you{
+    margin-top:40px;
+}
+
+.menu a{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 18px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.menu a.active{
+    background: linear-gradient(
+        90deg,
+        rgba(139, 92, 246, 0.22),
+        rgba(37, 99, 255, 0.15)
+    );
+
+    color: #c7b2ff;
+
+    border-left: 4px solid #8B5CF6;
+
+    border-radius: 12px;
+
+    padding: 12px 14px;
+
+    box-shadow:
+    0 0 20px rgba(139,92,246,0.18);
+
+    margin-left: -6px;
+}
+
+.menu a.active i{
+    color: #a78bfa;
+}
+
+.menu a:hover{
+    background: rgba(139,92,246,0.12);
+    color: #bfa7ff;
+}
+
+.logout-section{
+    margin-top:100px;
+    padding:1px;
+}
+
+.logout-btn{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color:white;
+    text-decoration:none;
+    font-size: 18px;
+
+    padding:12px 14px;
+    border-radius:12px;
+
+    transition:.3s ease;
+
+    background:
+    rgba(255,0,0,0.08);
+}
+
+.logout-btn:hover{
+
+    background:
+    rgba(139,92,246,.12);
+
+    color:#c7b2ff;
+
+    transform:translateY(-2px);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    height: 70px;
+    background: #03024b;
+
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:0 30px;
+
+    position: fixed;   
+    top: 0;
+    left: 320px;       
+
+    width: calc(100% - 320px);
+    z-index: 1000;
+
+    transition: all 0.4s ease;
+}
+
+.user-info{
+
+    color:white;
+
+    font-size:18px;
+
+    white-space:nowrap;
+
+    margin-left:auto;
+
+    max-width:250px;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+}
+
+.nav-logo{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.nav-logo img{
+    width:65px;
+}
+
+.nav-logo span{
+    font-size:24px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content{
+    margin-left:320px;
+    margin-top:70px;
+    padding:45px 50px;
+}
+
+/* =========================
+   FAVORITES PILL
+========================= */
+
+.favorites-pill{
+    width:fit-content;
+
+    background:#040535;
+    border:1px solid #232E8C;
+    border-radius:25px;
+
+    padding:10px 20px;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    color:#B9B8B8;
+    font-family:'Lemonada';
+    font-size:13px;
+}
+
+.favorites-pill i{
+    color:#8B5CF6;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.favorites-heading{
+    margin-top:35px;
+    margin-bottom: 35px;
+}
+
+.favorites-heading h1{
+    font-family:'Lemon';
+    font-size:64px;
+    font-weight:400;
+}
+
+.favorites-heading span{
+    color:#8B5CF6;
+}
+
+/* =========================
+   FAVORITES CARD
+========================= */
+
+#favoritesContainer{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(420px,1fr));
+    gap:40px;
+    margin-top:30px;
+    padding: 30px;
+}
+
+.favorites-card{
+    background:#090028;
+    border:1px solid #232E8C;
+    border-radius:25px;
+    padding:40px;
+    transition:.3s ease;
+}
+
+.favorite-card:hover{
+    transform:translateY(-5px);
+    border-color:#8B5CF6;
+}
+
+.favorite-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.mood-badge{
+    background:
+    linear-gradient(
+        90deg,
+        #8B5CF6,
+        #A855F7
+    );
+
+    color:white;
+
+    padding:5px 10px;
+
+    border-radius:30px;
+
+    font-size:10px;
+
+    font-family:'Lemonada';
+}
+
+.saved-date{
+    color:#B9B8B8;
+    font-size:12px;
+    margin-top:18px;
+}
+
+.remove-btn{
+    background:none;
+    border:none;
+    color:#8B5CF6;
+    font-size: 20px;
+    cursor:pointer;
+}
+
+.remove-btn:hover{
+    transform:scale(1.1);
+}
+
+.playlist-frame{
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.empty-state{
+    text-align:center;
+}
+
+.heart-icon{
+    font-size:40px;
+    color:#8B5CF6;
+
+    margin-bottom:20px;
+}
+
+.empty-state p{
+    color:#B9B8B8;
+    font-family:'Lemonada';
+    font-size:18px;
+
+    margin-bottom:25px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .navbar{
+        left:0;
+        width:100%;
+    }
+
+    .main-content{
+        margin-left:0;
+        padding:100px 20px;
+    }
+
+    .favorites-heading h1{
+        font-size:46px;
+    }
+>>>>>>> 236cf661cc88def0fa39c2dc0c47a7d964d8c411
 }

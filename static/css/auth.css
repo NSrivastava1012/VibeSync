@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin:0;
     padding:0;
@@ -155,4 +156,163 @@ body{
     color:#8B5CF6;
 
     text-decoration:none;
+=======
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+        180deg,
+        #03063E 0%,
+        #020426 100%
+    );
+
+    font-family:'Lemonada';
+}
+
+.auth-card{
+
+    width:450px;
+
+    background:
+    rgba(4,5,53,.85);
+
+    border:1px solid
+    rgba(139,92,246,.3);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:
+    0 0 30px
+    rgba(139,92,246,.15);
+}
+
+.logo{
+
+    width:120px;
+    margin-bottom:10px;
+}
+
+.auth-card h1{
+
+    font-family:'Lemon';
+
+    color:white;
+
+    font-size:42px;
+
+    font-weight:400;
+
+    margin-bottom:10px;
+}
+
+.subtitle{
+
+    color:#B9B8B8;
+
+    font-size:14px;
+
+    margin-bottom:30px;
+}
+
+.input-group{
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    background:#0A0C50;
+
+    border:1px solid #232E8C;
+
+    border-radius:16px;
+
+    padding:14px 18px;
+
+    margin-bottom:18px;
+}
+
+.input-group i{
+
+    color:#8B5CF6;
+}
+
+.input-group input{
+
+    width:100%;
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    font-size:15px;
+}
+
+.auth-btn{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:15px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #8B5CF6,
+        #6D28D9
+    );
+
+    color:white;
+
+    font-family:'Lemonada';
+
+    cursor:pointer;
+
+    margin-top:10px;
+
+    transition:.3s ease;
+}
+
+.auth-btn:hover{
+
+    transform:translateY(-3px);
+}
+
+.bottom-text{
+
+    color:#B9B8B8;
+
+    margin-top:22px;
+
+    font-size:14px;
+}
+
+.bottom-text a{
+
+    color:#8B5CF6;
+
+    text-decoration:none;
+>>>>>>> 236cf661cc88def0fa39c2dc0c47a7d964d8c411
 }
