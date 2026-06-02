@@ -1,0 +1,14 @@
+{
+  "joy": ["Feel Good Hits", "Happy Pop", "Dance Vibes"],
+  "sadness": ["Soft Acoustic", "Comfort Songs", "Slow Indie"],
+  "anger": ["Rock Energy", "Metal Hits", "Rap Intensity"],
+  "fear": ["Calm Piano", "Lo-Fi Focus", "Peaceful Instrumentals"],
+  "nervousness": ["Stress Relief", "Chill Beats", "Relaxing Music"],
+  "love": ["Romantic Songs", "Love Ballads", "Soft Pop"],
+  "excitement": ["Party Hits", "Workout Mix", "EDM Energy"],
+  "gratitude": ["Positive Vibes", "Soul Music", "Peaceful Songs"],
+  "optimism": ["Morning Motivation", "Dream Big", "Uplifting Music"],
+  "disappointment": ["Healing Songs", "Slow Chill", "Emotional Mix"],
+  "neutral": ["Daily Mix", "Trending Songs", "Lo-Fi Chill"],
+  "surprise": ["Unexpected Hits", "Fresh Finds", "Discover Weekly"]
+}
