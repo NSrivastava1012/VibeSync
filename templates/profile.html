@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | VibeSync</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/profile.css') }}">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Lemon&family=Lemonada:wght@300;400&display=swap"
+    rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo-section">
+
+            <img src="{{ url_for('static',
+            filename='images/logo.png') }}">
+
+            <div class="logo-text">
+                <h2>VibeSync</h2>
+                <p>Your Vibe, Perfectly Synced</p>
+            </div>
+
+            <div class="menu-toggle"
+            id="menuToggle">
+                ☰
+            </div>
+
+        </div>
+
+        <div class="menu">
+
+            <div class="menu-title">
+                Discover
+            </div>
+
+            <a href="{{ url_for('home') }}">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="{{ url_for('mood_analyzer') }}">
+                <i class="fa-regular fa-face-smile"></i>
+                Mood Analyzer
+            </a>
+
+            <a href="{{ url_for('recommendation') }}">
+                <i class="fa-solid fa-music"></i>
+                Recommendations
+            </a>
+
+            <div class="menu-title focus">
+                Focus
+            </div>
+
+            <a href="{{ url_for('studyzone') }}">
+                <i class="fa-solid fa-book-open"></i>
+                Study Zone
+            </a>
+
+            <div class="menu-title you">
+                You
+            </div>
+
+            <a href="{{ url_for('dashboard') }}">
+                <i class="fa-solid fa-chart-line"></i>
+                Dashboard
+            </a>
+
+            <a href="{{ url_for('favorites') }}">
+                <i class="fa-regular fa-heart"></i>
+                Favorite
+            </a>
+
+            <a href="{{ url_for('profile') }}" class="active">
+                <i class="fa-regular fa-user"></i>
+                Profile
+            </a>
+
+        </div>
+        <div class="logout-section">
+
+            <a href="{{ url_for('logout') }}"
+            class="logout-btn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+
+            </a>
+
+        </div>
+    </aside>
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="main-content" id="mainContent">
+
+        <!-- NAVBAR -->
+        <div class="navbar">
+
+            <div class="nav-logo"
+            id="navLogo">
+
+                <img src="{{ url_for('static',filename='images/logo.png') }}">
+                <span>VibeSync</span>
+
+            </div>
+
+        </div>
+
+        <!-- Profile Pill -->
+        <div class="profile-pill">
+
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+
+        </div>
+
+
+        <!-- Heading -->
+        <div class="heading">
+
+            <h1>
+                Your
+                <span>Preference</span>
+            </h1>
+
+        </div>
+
+
+        <!-- Profile Card -->
+        <div class="profile-card">
+
+            <!-- User Info -->
+            <div class="user-info">
+
+                <div class="avatar">
+                    {{ user.username[0].upper() }}
+                </div>
+
+                <div>
+                    <h3>{{ user.username }}</h3>
+                    <p>Loves {{ user.favorite_genre or "Music" }}</p>
+                </div>
+
+            </div>
+
+
+            <!-- Display Name -->
+            <div class="field-group">
+
+                <label>
+                    Display Name
+                </label>
+
+                <input
+                    type="text"
+                    id="displayName"
+                    value="{{ user.username }}"
+                    placeholder="Display Name">
+
+            </div>
+
+
+            <!-- Favorite Genre -->
+            <div class="genre-container">
+
+                {% for genre in [
+                    "Indie",
+                    "Pop",
+                    "Hip-Hop",
+                    "Rock",
+                    "Classical",
+                    "Jazz",
+                    "Electronic"
+                ] %}
+
+                <button
+                    type="button"
+                    class="genre {% if user.favorite_genre == genre %}active{% endif %}"
+                    data-genre="{{ genre }}">
+
+                    {{ genre }}
+
+                </button>
+
+                {% endfor %}
+
+            </div>
+
+            <input
+                type="hidden"
+                id="selectedGenre"
+                value="{{ user.favorite_genre }}">
+
+
+            <!-- Reduce Motion -->
+            <div class="motion-section">
+
+                <div>
+
+                    <h4>
+                        Reduce Motion
+                    </h4>
+
+                    <p>
+                        Tone down background
+                        animations
+                    </p>
+
+                </div>
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="reduceMotion"
+
+                        {% if user.reduce_motion %}
+                            checked
+                        {% endif %}>
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <!-- Save Button -->
+            <button
+                class="save-btn"
+                id="savePreferencesBtn">
+
+                Save Preferences
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script>
+        const saveProfileUrl ="{{ url_for('save_profile') }}";
+    </script>
+
+    <script src="{{ url_for('static',filename='js/profile.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VibeSync Register</title>
+
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Lemon&family=Lemonada:wght@300;400;500&display=swap">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/auth.css') }}">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <img
+        src="{{ url_for('static', filename='images/logo.png') }}"
+        class="logo">
+
+        <h1>Create Account</h1>
+
+        <p class="subtitle">
+            Join VibeSync and discover playlists for every mood
+        </p>
+
+        <form method="POST">
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-user"></i>
+
+                <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                required>
+
+            </div>
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required>
+
+            </div>
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required>
+
+            </div>
+
+            <button
+            type="submit"
+            class="auth-btn">
+
+                Create Account
+
+            </button>
+
+        </form>
+
+        <p class="bottom-text">
+
+            Already have an account?
+
+            <a href="{{ url_for('login') }}">
+                Sign In
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
