@@ -7,7 +7,7 @@ from flask import (
     session
 )
 
-from model.recommend import (
+from mood_model.recommend import (
     recommend_playlist,
     predict_mood
 )
